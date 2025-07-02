@@ -1,0 +1,38 @@
+name: musical_instrument_app
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: ^3.8.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.2
+  audioplayers: ^6.5.0
+  printing: ^5.14.2
+  provider: ^6.1.5
+
+
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/Dilbara.mp3
+    - assets/xylophone-1.wav
+    - assets/xylophone-2.wav
+    - assets/xylophone-3.wav
+    - assets/img/m1.webp
+    - assets/img/m2.webp
+    - assets/img/m3.jpg
+    - assets/img/m4.jpg
+
