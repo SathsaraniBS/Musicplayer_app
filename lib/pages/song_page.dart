@@ -62,14 +62,16 @@ class SongPage extends StatelessWidget {
           const SizedBox(height: 25,),
           //album artwork
           NeuBox(
-            child:Column(
-              children: [
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(8),
-                  child: Image.asset(
-                currentSong.albumArtImagePath,
-              ),
+            width: 150,
+            height: 150,
+            color: Theme.of(context).colorScheme.surface,
+            child: Image.asset(currentSong.albumArtImagePath),
             ),
+
+
+            
+        
+          ),
 
             Padding(
               padding: const EdgeInsets.all(15.0),
@@ -128,7 +130,7 @@ class SongPage extends StatelessWidget {
               Icon(Icons.repeat),
 
                   //end time
-                  Text("0:00"),
+                  Text("00:00"),
                   
                 ],
               ),
