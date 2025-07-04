@@ -39,8 +39,8 @@ class PlaylistProvider extends ChangeNotifier {
   final AudioPlayer _audioPlayer = AudioPlayer();
 
   //durations
-  Duration _currentDuration = Duration.zero;
-  Duration _totalDuration = Duration.zero;
+  Duration _currentDuration = Duration(seconds: 0);
+  Duration _totalDuration = Duration(seconds: 480);
 
   //constructor
   PlaylistProvider() {
