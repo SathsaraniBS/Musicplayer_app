@@ -10,7 +10,7 @@ class PlaylistProvider extends ChangeNotifier {
       songName: 'Believer',
       artistName: 'Imagine Dragons',
       albumArtImagePath: 'assets/img/m1.webp',
-      audioPath: 'assets/Dilbara.mp3',
+      audioPath: 'assets/songs/Perfect-(Mr-Jat.in).mp3',
     ),
 
     //song 2
@@ -18,7 +18,7 @@ class PlaylistProvider extends ChangeNotifier {
       songName: 'Prefect',
       artistName: 'Ed Sheeran',
       albumArtImagePath: 'assets/img/m2.webp',
-      audioPath: 'assets/Dilbara.mp3',
+      audioPath: 'assets/songs/Perfect-(Mr-Jat.in).mp3',
     ),
 
     //song 3
@@ -26,7 +26,7 @@ class PlaylistProvider extends ChangeNotifier {
       songName: 'Senorita',
       artistName: 'Shawan mendes',
       albumArtImagePath: 'assets/img/m4.jpg',
-      audioPath: 'assets/Dilbara.mp3',
+      audioPath: 'assets/songs/Perfect-(Mr-Jat.in).mp3',
     ),
   ];
 
@@ -111,8 +111,7 @@ class PlaylistProvider extends ChangeNotifier {
     //if more than 2 seconds have passed ,restart the current song
     if (_currentDuration.inSeconds > 2) {
         
-        //go to the previous song
-        currentSongIndex = _currentSongIndex! - 1;
+        seek(Duration.zero);
     }
 
     //if it's within first  2 second of the song, go to the previous song
@@ -162,8 +161,9 @@ class PlaylistProvider extends ChangeNotifier {
   List<Song> get playlist => _playlist;
   int? get currentSongIndex => _currentSongIndex;
   bool get isPlaying => _isPlaying;
-  Duration get totalDuration => _totalDuration;
   Duration get currentDuration => _currentDuration;
+  Duration get totalDuration => _totalDuration;
+
 
   /*setters  */
 

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 class NeuBox extends StatelessWidget {
 
   final Widget? child;
@@ -9,6 +10,9 @@ class NeuBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    //is dark mode
+    bool isdarkMode = Provider.of<ThemeProvider>(context).isdarkMode;
     return Container(
       decoration: BoxDecoration(
         color: Theme.of(context).colorScheme.surface,
@@ -16,14 +20,14 @@ class NeuBox extends StatelessWidget {
         boxShadow:  [
           //daker shadow on bottom right
           BoxShadow(
-            color: Colors.grey.shade500,
+            color:isdarkMode ? Colors.grey.shade800 :  Colors.grey.shade500,
             offset: Offset(4, 4),
             blurRadius: 15,
           ),
 
           //lighter shadow on top left
           BoxShadow(
-            color: Colors.white,
+            color:isdarkMode ? Colors.grey.shade800 : Colors.white,
             offset: Offset(-4, -4),
             blurRadius: 15,
           ),

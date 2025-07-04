@@ -14,6 +14,8 @@ dependencies:
   audioplayers: ^6.5.0
   printing: ^5.14.2
   provider: ^6.1.5
+  
+
 
 
 
@@ -27,10 +29,7 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/Dilbara.mp3
-    - assets/xylophone-1.wav
-    - assets/xylophone-2.wav
-    - assets/xylophone-3.wav
+    - assets/songs/Perfect-(Mr-Jat.in).mp3
     - assets/img/m1.webp
     - assets/img/m2.webp
     - assets/img/m3.jpg
