@@ -19,6 +19,9 @@ class SongPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Consumer<PlaylistProvider>(
       builder: (context, value, child) {
+
+         print(
+            'Current: ${value.currentDuration.inSeconds}, Total: ${value.totalDuration.inSeconds}');
         //get playlist
         final playlist = value.playlist;
 
@@ -113,6 +116,7 @@ class SongPage extends StatelessWidget {
                     children: [
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 25),
+
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [

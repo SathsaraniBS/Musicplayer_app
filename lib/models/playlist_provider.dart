@@ -88,6 +88,8 @@ class PlaylistProvider extends ChangeNotifier {
   //seek to a specific position in the current song
   void seek(Duration position) async{
     await _audioPlayer.seek(position);
+     _currentDuration = position; // update local state
+     notifyListeners();
   }
 
 
