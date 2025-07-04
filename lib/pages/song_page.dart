@@ -134,21 +134,21 @@ class SongPage extends StatelessWidget {
                       SliderTheme(
                         data: SliderTheme.of(context).copyWith(
                           thumbShape: const RoundSliderThumbShape(
-                            enabledThumbRadius: 0,
+                            enabledThumbRadius: 6,
                           ),
                         ),
                         child: Slider(
                           min: 0,
-                          max: value.totalDuration.inSeconds.toDouble(),
-                          value: value.currentDuration.inSeconds.toDouble(),
+                          max: value.totalDuration.inSeconds == 0 ? 1 : value.totalDuration.inSeconds.toDouble(),
+                          value: value.currentDuration.inSeconds.clamp(0, value.totalDuration.inSeconds).toDouble(),
                           activeColor: Colors.green,
-                          onChanged: (double double) {
+                          onChanged: (double newValue) {
                             //during when the is sliding around
                           },
 
-                          onChangeEnd: (double double) {
+                          onChangeEnd: (double newValue) {
                             //sliding has finished, go to that position in song new duration
-                            value.seek(Duration(seconds: double.toInt()));
+                            value.seek(Duration(seconds: newValue.toInt()));
                           },
                         ),
                       ),
