@@ -4,8 +4,12 @@ import 'package:provider/provider.dart';
 import 'package:musical_instrument_app/models/playlist_provider.dart';
 import 'package:musical_instrument_app/models/song.dart';
 import 'package:musical_instrument_app/pages/song_page.dart';
+import 'package:audioplayers/audioplayers.dart';
 class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+  final AudioPlayer audioPlayer; // Define the audioPlayer parameter
+
+  HomePage({super.key, required this.audioPlayer}) : super(key: key ?? ValueKey(null));
+
 
   @override
   State<HomePage> createState() => _HomePageState();
