@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:musical_instrument_app/themes/theme_provider.dart';
 class NeuBox extends StatelessWidget {
 
   final Widget? child;
@@ -12,7 +13,7 @@ class NeuBox extends StatelessWidget {
   Widget build(BuildContext context) {
 
     //is dark mode
-    bool isdarkMode = Provider.of<ThemeProvider>(context).isdarkMode;
+    bool isdarkMode = Provider.of<ThemeProvider>(context).isDark;
     return Container(
       decoration: BoxDecoration(
         color: Theme.of(context).colorScheme.surface,
