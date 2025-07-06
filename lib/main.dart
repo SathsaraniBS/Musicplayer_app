@@ -1,24 +1,32 @@
 import 'package:flutter/material.dart';
+import 'pages/home_page.dart';
+import 'package:provider/provider.dart';
+import 'themes/theme_provider.dart';
+import 'models/playlist_provider.dart';
 import 'package:audioplayers/audioplayers.dart';
-import 'package:musical_instrument_app/pages/home_page.dart';
+
 void main() {
-  runApp(MyApp());
-}
+  runApp(
+    MultiProvider(providers: [
+      ChangeNotifierProvider(create: (context) => ThemeProvider(),),
+      ChangeNotifierProvider(create: (context) => PlaylistProvider(),),
+    ],
+    child: const MyApp(),
+    ),
+  );    
+  
+  }
 
 class MyApp extends StatelessWidget {
-  final AudioPlayer audioPlayer = AudioPlayer(); // Initialize AudioPlayer globally
+  const MyApp({super.key});
 
-  MyApp({super.key});
-  
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Music Player',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: HomePage(audioPlayer: audioPlayer), // Pass the AudioPlayer to HomeScreen
-    );
-  }
+  return MaterialApp(
+    debugShowCheckedModeBanner: false,
+    //home: HomePage(), 
+    home: HomePage(audioPlayer: AudioPlayer()), 
+    theme: Provider.of<ThemeProvider>(context).themeData, // or Homepage if it's a stateless widget
+  );
+}
 }

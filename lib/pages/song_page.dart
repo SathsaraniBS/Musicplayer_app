@@ -19,9 +19,10 @@ class SongPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Consumer<PlaylistProvider>(
       builder: (context, value, child) {
+      // Use the print function here
+      // ignore: avoid_print
+      print('Current: ${value.currentDuration.inSeconds}, Total: ${value.totalDuration.inSeconds}');
 
-         print(
-            'Current: ${value.currentDuration.inSeconds}, Total: ${value.totalDuration.inSeconds}');
         //get playlist
         final playlist = value.playlist;
 
