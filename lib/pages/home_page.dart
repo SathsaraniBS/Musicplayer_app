@@ -8,7 +8,7 @@ import 'package:audioplayers/audioplayers.dart';
 class HomePage extends StatefulWidget {
   final AudioPlayer audioPlayer; // Define the audioPlayer parameter
 
-  HomePage({super.key, required this.audioPlayer}) : super(key: key ?? ValueKey(null));
+    const HomePage({super.key, required this.audioPlayer});
 
 
   @override

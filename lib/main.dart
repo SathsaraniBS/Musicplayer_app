@@ -7,6 +7,8 @@ void main() {
 
 class MyApp extends StatelessWidget {
   final AudioPlayer audioPlayer = AudioPlayer(); // Initialize AudioPlayer globally
+
+  MyApp({super.key});
   
   @override
   Widget build(BuildContext context) {
