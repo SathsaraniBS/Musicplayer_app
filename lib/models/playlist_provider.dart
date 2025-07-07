@@ -28,6 +28,22 @@ class PlaylistProvider extends ChangeNotifier {
       albumArtImagePath: 'assets/img/m4.jpg',
       audioPath: 'assets/songs/Perfect-(Mr-Jat.in).mp3',
     ),
+
+    //song 4
+    Song(
+      songName: 'Night Changes',
+      artistName: 'One Derections',
+      albumArtImagePath: 'assets/img/m5.jpg',
+      audioPath: 'assets/songs/Perfect-(Mr-Jat.in).mp3',
+    ),
+
+    //song 5
+    Song(
+      songName: 'Bad Liar',
+      artistName: 'Eminem',
+      albumArtImagePath: 'assets/img/m6.jpg',
+      audioPath: 'assets/songs/Perfect-(Mr-Jat.in).mp3',
+    ),
   ];
 
   //current song index
