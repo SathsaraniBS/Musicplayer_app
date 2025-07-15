@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'pages/home_page.dart';
+//import 'pages/home_page.dart';
 import 'package:provider/provider.dart';
 import 'themes/theme_provider.dart';
 import 'models/playlist_provider.dart';
-import 'package:audioplayers/audioplayers.dart';
-
+//import 'package:audioplayers/audioplayers.dart';
+import 'package:musical_instrument_app/pages/login_page.dart';
 void main() {
   runApp(
     MultiProvider(providers: [
@@ -25,8 +25,9 @@ class MyApp extends StatelessWidget {
   return MaterialApp(
     debugShowCheckedModeBanner: false,
     //home: HomePage(), 
-    home: HomePage(audioPlayer: AudioPlayer()), 
-    theme: Provider.of<ThemeProvider>(context).themeData, // or Homepage if it's a stateless widget
+    //home: HomePage(audioPlayer: AudioPlayer()), 
+    //theme: Provider.of<ThemeProvider>(context).themeData, /
+    home: const LoginPage(),
   );
 }
 }
