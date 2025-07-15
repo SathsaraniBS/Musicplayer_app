@@ -44,6 +44,46 @@ class PlaylistProvider extends ChangeNotifier {
       albumArtImagePath: 'assets/img/m6.jpg',
       audioPath: 'assets/songs/Perfect-(Mr-Jat.in).mp3',
     ),
+
+    //song 6
+    Song(
+      songName: 'Baby',
+      artistName: 'Justin Bieber',
+      albumArtImagePath: 'assets/img/m7.jpg',
+      audioPath: 'assets/songs/Perfect-(Mr-Jat.in).mp3',
+    ),
+
+    //song 7
+    Song(
+      songName: 'Diamonds',
+      artistName: 'Rihanna',
+      albumArtImagePath: 'assets/img/m8.jpg',
+      audioPath: 'assets/songs/Perfect-(Mr-Jat.in).mp3',
+    ),
+
+    //song 8
+    Song(
+      songName: 'Come down',
+      artistName: 'Selena Gomez',
+      albumArtImagePath: 'assets/img/m9.jpg',
+      audioPath: 'assets/songs/Perfect-(Mr-Jat.in).mp3',
+    ),
+
+    //song 9
+    Song(
+      songName: 'Blinding Lights',
+      artistName: 'The Weeknd',
+      albumArtImagePath: 'assets/img/m10.jpg',
+      audioPath: 'assets/songs/Perfect-(Mr-Jat.in).mp3',
+    ),
+
+    //song 10
+    Song(
+      songName: 'Taki Taki',
+      artistName: 'Alan Walker',
+      albumArtImagePath: 'assets/img/m11.jpg',
+      audioPath: 'assets/songs/Perfect-(Mr-Jat.in).mp3',
+    ),
   ];
 
   //current song index
